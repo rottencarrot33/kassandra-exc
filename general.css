@@ -168,12 +168,12 @@ ul {
     }
 
     .price {
-        bottom: 30px;
+        bottom: 0;
         right: 50%;
     }
 
     .price2 {
-        bottom: 30px;
+        bottom: 0;
     }
 
 
