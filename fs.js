@@ -8,13 +8,11 @@ setTimeout(function () {
 // Add 'Bus stop' on <li>
 
 let ulElement = document.querySelector('ul');
-
 let liElement = ulElement.querySelector('li');
+liElement.textContent = liElement.textContent.trim();
 
-liElement.textContent += ' (Bus stop)';
-
-
-
-
-
-
+let busStopElement = document.createElement('span');
+busStopElement.textContent = ' (Bus stop)';
+busStopElement.style.color = '#0A4D68';
+busStopElement.style.fontWeight = 'bold';
+liElement.appendChild(busStopElement);
