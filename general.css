@@ -134,6 +134,14 @@ ul {
 }
 
 @media (max-width:450px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
     .back-to-slides img {
         width: 40px;
     }
@@ -147,7 +155,7 @@ ul {
     }
 
     .img img {
-        border: none;
+        border-bottom-left-radius: 0;
     }
 
     .img::before {
