@@ -36,4 +36,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+// Navbar
 
+let toggleButton = document.getElementsByClassName("toggle-button")[0];
+let navbarLinks = document.getElementsByClassName("navbar-links")[0];
+
+toggleButton.addEventListener("click", () => {
+    navbarLinks.classList.toggle("active");
+
+    // Check if the dropdown is currently open or closed
+    if (navbarLinks.classList.contains("active")) {
+        // Dropdown is currently open
+        toggleButton.setAttribute("aria-expanded", "true");
+    } else {
+        // Dropdown is currently closed
+        toggleButton.setAttribute("aria-expanded", "false");
+    }
+});
+
+document.addEventListener("click", (event) => {
+    // Check if the clicked element is inside the navbar or toggle button
+    if (
+        !navbarLinks.contains(event.target) &&
+        !toggleButton.contains(event.target)
+    ) {
+        navbarLinks.classList.remove("active");
+        toggleButton.setAttribute("aria-expanded", "false");
+    }
+});
