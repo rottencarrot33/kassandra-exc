@@ -74,6 +74,10 @@ body {
     .kassandra-img {
         object-position: 72% 50%;
     }
+
+    .toggle-button {
+        left: 48%;
+    }
 }
 
 
@@ -124,7 +128,7 @@ body {
 .toggle-button {
     position: absolute;
     top: 2.2rem;
-    left: 48%;
+    left: 50%;
     transform: translateX(-50%);
     display: none;
     flex-direction: column;
