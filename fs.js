@@ -1,6 +1,6 @@
 
 setTimeout(function () {
-    window.location.href = 'https://rottencarrot33.github.io/kassandra-exc/';
+    window.location.href = 'index.html';
 }, 3 * 60 * 1000);
 
 
@@ -16,12 +16,6 @@ busStopElement.textContent = ' (Bus stop)';
 busStopElement.style.color = '#0A4D68';
 busStopElement.style.fontWeight = 'bold';
 liElement.appendChild(busStopElement);
-
-
-
-
-
-
 
 
 
