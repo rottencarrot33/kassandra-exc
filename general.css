@@ -7,8 +7,20 @@ body {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+}
+
+@media (min-width:500px) {
+    body {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+
+@media (max-width:499px) {
+    body {
+        height: 100vh;
+        overflow-y: scroll;
+    }
 }
 
 p,
@@ -176,12 +188,12 @@ ul {
     }
 
     .price {
-        bottom: -20px;
+        bottom: 0;
         right: 50%;
     }
 
     .price2 {
-        bottom: -20px;
+        bottom: 0;
     }
 
 
