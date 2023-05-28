@@ -20,7 +20,9 @@ body {
     body {
         height: 100vh;
         overflow-y: scroll;
+        overflow-x: hidden;
     }
+
 }
 
 p,
@@ -48,15 +50,12 @@ html {
     display: none;
 }
 
-
 .back-to-slides {
     position: absolute;
     top: 11px;
     left: 5px;
     z-index: 10000 !important;
 }
-
-
 
 .back-to-slides img {
     width: 60px;
@@ -71,7 +70,6 @@ main {
 .text {
     width: 40%;
 }
-
 
 .text h3 {
     font-weight: 500;
@@ -98,7 +96,6 @@ main {
     right: 6%;
     text-align: right;
 }
-
 
 .img {
     position: relative;
@@ -127,8 +124,6 @@ main {
     right: 22%;
 } */
 
-
-
 .color-blue {
     color: #0A4D68;
 }
@@ -145,13 +140,12 @@ ul {
     padding-right: 10px;
 }
 
-@media (max-width:450px) {
+@media (max-width:499px) {
 
-    body {
-        margin: 0;
-        padding: 0;
-        width: 100vw;
-        overflow-x: hidden;
+    .price,
+    .price2 {
+        position: static;
+        text-align: center;
     }
 
     .back-to-slides img {
@@ -160,7 +154,7 @@ ul {
 
     .img {
         width: 100% !important;
-        height: 100vh !important;
+        height: 100% !important;
         position: absolute;
         z-index: -1000;
         opacity: 0.3;
@@ -186,15 +180,4 @@ ul {
     .days {
         display: none;
     }
-
-    .price {
-        bottom: 0;
-        right: 50%;
-    }
-
-    .price2 {
-        bottom: 0;
-    }
-
-
 }
