@@ -40,37 +40,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
 let toggleButton = document.getElementsByClassName("toggle-button")[0];
 let navbarLinks = document.getElementsByClassName("navbar-links")[0];
+let timeoutID;
+
+function closeNavbar() {
+    navbarLinks.classList.remove("active");
+    toggleButton.setAttribute("aria-expanded", "false");
+}
+
+function resetAutoClose() {
+    clearTimeout(timeoutID);
+    timeoutID = setTimeout(closeNavbar, 60000);
+}
 
 toggleButton.addEventListener("click", () => {
     navbarLinks.classList.toggle("active");
 
-    // Check if the dropdown is currently open or closed
     if (navbarLinks.classList.contains("active")) {
-        // Dropdown is currently open
         toggleButton.setAttribute("aria-expanded", "true");
     } else {
-        // Dropdown is currently closed
         toggleButton.setAttribute("aria-expanded", "false");
     }
+
+    resetAutoClose();
 });
 
 document.addEventListener("click", (event) => {
-    // Check if the clicked element is inside the navbar or toggle button
     if (
         !navbarLinks.contains(event.target) &&
         !toggleButton.contains(event.target)
     ) {
-        navbarLinks.classList.remove("active");
-        toggleButton.setAttribute("aria-expanded", "false");
+        closeNavbar();
     }
 });
 
-
-
-
-
-
-
+resetAutoClose();
 
 
 
