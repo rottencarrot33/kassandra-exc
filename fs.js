@@ -1,5 +1,5 @@
 
- setTimeout(function () {
+setTimeout(function () {
     window.location.href = 'index.html';
 }, 3 * 60 * 1000);
 

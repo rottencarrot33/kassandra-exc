@@ -147,6 +147,15 @@ ul {
         bottom: 0;
     }
 
+    p,
+    li {
+        font-size: 1.6rem;
+    }
+
+    .text ul {
+        padding-left: 2rem;
+    }
+
     body {
         height: 100vh;
         overflow-y: scroll;

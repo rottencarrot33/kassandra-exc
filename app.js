@@ -1,4 +1,4 @@
-
+// Set correct slide after going back one page
 document.addEventListener("DOMContentLoaded", function (event) {
     // Get the query parameter from the URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 function refreshPage() {
     window.location.reload();
 }
-
 setTimeout(refreshPage, 30 * 60 * 1000);
 
 
@@ -28,7 +27,14 @@ setTimeout(refreshPage, 30 * 60 * 1000);
 document.addEventListener('DOMContentLoaded', function () {
     if (window.innerWidth < 500) {
         var carouselItem = document.getElementById('carousel-item-mobile');
-        carouselItem.parentNode.removeChild(carouselItem);
+        if (carouselItem) {
+            carouselItem.parentNode.removeChild(carouselItem);
+        }
+    } else if (window.innerWidth > 1300) {
+        var carouselItem = document.getElementById('carousel-item-mobile');
+        if (carouselItem) {
+            carouselItem.parentNode.removeChild(carouselItem);
+        }
     }
 });
 
